@@ -1,0 +1,30 @@
+<package>
+  <name>robit_urdf</name>
+  <version>0.3.0</version>
+
+  <description>This package contains robit.</description>
+  <author email="elvin.yang9@gmail.com">Elvin Yang</author>
+
+  <maintainer email="elvin.yang9@gmail.com">Elvin Yang</maintainer>
+
+  <license>BSD</license>
+  <!-- <url>http://ros.org/wiki/urdf_tutorial</url> -->
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>tf</build_depend>
+<!--   <build_export_depend>roscpp</build_export_depend>
+  <build_export_depend>rospy</build_export_depend>
+  <build_export_depend>sensor_msgs</build_export_depend>
+  <build_export_depend>std_msgs</build_export_depend>
+  <build_export_depend>tf</build_export_depend>
+  <exec_depend>roscpp</exec_depend>
+  <exec_depend>rospy</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>tf</exec_depend>
+ -->
+</package>

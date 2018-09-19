@@ -1,0 +1,24 @@
+<launch>
+
+    <arg name="model" default="$(find robit_urdf)/urdf/robit.urdf"/>
+    <arg name="gui" default="true" />
+    <arg name="rvizconfig" default="$(find robit_urdf)/rviz/urdf.rviz" />
+
+    <param name="robot_description" command="$(find xacro)/xacro.py $(arg model)" />
+    <param name="use_gui" value="$(arg gui)"/>
+
+    <!-- <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" /> -->
+    <!-- <node name="joint_state_publisher" pkg="robit_urdf" type="joint_state_publisher" /> -->
+    <node name="joint_state_publisher" pkg="robit_urdf" type="joint_state_publisher1" />
+
+    <!-- <rosparam>
+        dependent_joints:
+            elbow_joint: {parent: left_bracket_to_upper_arm, factor: -1 }
+        zeros:
+            left_bracket_to_upper_arm: 1
+    </rosparam> -->
+
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />
+
+</launch>
