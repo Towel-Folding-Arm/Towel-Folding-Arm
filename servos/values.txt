@@ -1,0 +1,38 @@
+1-4:
+	∆750 ≈ ∆90º
+	∆500 ≈ ∆60º
+
+5-6:
+	∆850 ≈ ∆90º
+	∆570 ≈ ∆60º
+
+
+1:
+	min: 550	(ccw from back)
+	mid: 1350
+	max: 2100 	(cw from back)
+
+2:
+	min: 825	(extend)
+	med: 1400	(vertical)
+	max: 2100	(contract)
+
+3:
+	min: 650	(contract)
+	med: 1500	(link ≈ vertical)
+	max: 1850	(extend)
+
+4:
+	min: 500	(ccw from back)
+	med: 1400	(hole on pvc centered)
+	max: 2135	(cw from back)
+
+5:
+	min: 650	(down)
+	med: 1450	(straight)
+	max: 2270	(up)
+
+6:
+	min: 500	(ccw from back)
+	med: 1350
+	max: 2300	(cw from back)
