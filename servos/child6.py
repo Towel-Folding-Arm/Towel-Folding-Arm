@@ -1,38 +1,36 @@
-import pigpio;
-import time;
+import pigpio
+import time
 
-pi = pigpio.pi();
+pi = pigpio.pi()
 
-PIN6 = 22;
+PIN6 = 22
 
-pi.set_mode(PIN6, pigpio.OUTPUT);
+pi.set_mode(PIN6, pigpio.OUTPUT)
 
-wait = 0.008;
+pi.set_servo_pulsewidth(PIN6, 1150)
 
-pi.set_servo_pulsewidth(PIN6, 1400);
-
-def moveto(num, end, cur):
+def moveto(num, end, cur, wait):
 	if num == 6:
-		if end >= 500 and end <= 2300:
-			s6(end, cur);
+		if end >= 500 and end <= 1800:
+			s6(end, cur, wait)
 		else:
-			print("Range6: 500->2300");
+			print("Range6: 500->1800")
 
-def s6(val, cur):
+def s6(val, cur, wait):
 	if cur[6] < val:
 		while cur[6] < val:
-			cur[6] += 5;
-			pi.set_servo_pulsewidth(PIN6, cur[6]);
-			time.sleep(wait);
+			cur[6] += 1
+			pi.set_servo_pulsewidth(PIN6, cur[6])
+			time.sleep(wait)
 	elif cur[6] > val:
 		while cur[6] > val:
-			cur[6] -= 5;
-			pi.set_servo_pulsewidth(PIN6, cur[6]);
-			time.sleep(wait);
+			cur[6] -= 1
+			pi.set_servo_pulsewidth(PIN6, cur[6])
+			time.sleep(wait)
 
 def stop(cur):
-	s6(1400, cur);
-	time.sleep(0.2);
-	pi.set_servo_pulsewidth(PIN6, 0);
-	pi.stop();
-	print("6 Stopped.");
+	s6(1150, cur, 0.001)
+	time.sleep(0.2)
+	pi.set_servo_pulsewidth(PIN6, 0)
+	pi.stop()
+	print("6 Stopped.")
