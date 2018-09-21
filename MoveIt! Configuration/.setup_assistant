@@ -1,0 +1,10 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: robit_urdf
+    relative_path: urdf/robit2.urdf
+  SRDF:
+    relative_path: config/robit_urdf.srdf
+  CONFIG:
+    author_name: Elvin Yang
+    author_email: elvin.yang9@gmail.com
+    generated_timestamp: 1525037444

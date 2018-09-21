@@ -1,0 +1,12 @@
+controller_list:
+  - name: fake_arm_controller
+    joints:
+      - shoulder_rotate
+      - left_bracket_to_upper_arm
+      - elbow_joint
+      - forearm_rotate
+      - wrist_joint
+      - finger_rotate
+  - name: fake_endeffector_controller
+    joints:
+      []
