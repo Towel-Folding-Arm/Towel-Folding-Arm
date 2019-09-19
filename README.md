@@ -8,7 +8,7 @@ This project consists of three main components: machine vision, robot kinematics
 
 ### Machine Vision
 
-Machine vision is used to process the position and orientation of the towel on a flat surface. To accomplish this, an XBOX 360 Kinect camera mounted on a wooden stand continuously captures color image data and a depth map of the surface. A hough transform is performed on the depth point cloud and used in edge detection to determine the location of the towel's edges and corners. The coordinates of the four corners of the towel are transformed from the camera's reference frame to the robot's reference frame and subsequently published to the motion planning tool.
+Machine vision is used to process the position and orientation of the towel on a flat surface. To accomplish this, an Xbox 360 Kinect camera mounted on a wooden stand continuously captures color image data and a depth map of the surface. A hough transform is performed on the depth point cloud and used in edge detection to determine the location of the towel's edges and corners. The coordinates of the four corners of the towel are transformed from the camera's reference frame to the robot's reference frame and subsequently published to the motion planning tool.
 
 
 ### Robot Kinematics
@@ -33,3 +33,10 @@ A Raspberry Pi serves as the controller for the robot arm. The pulse width modul
 - [OpenCV](https://opencv.org/)
 - [MoveIt](https://moveit.ros.org)
 - [pigpio](http://abyz.me.uk/rpi/pigpio/python.html)   
+
+### Notes
+
+- Development of this project has slowed.
+- This repository cannot be built as it is a clone of a ROS workspace with Makefiles omitted. For the full workspace, please contact
+  - warren [dot] wang [at] utexas [dot] edu
+  - elvin [dot] yang [at] utexas [dot] edu
